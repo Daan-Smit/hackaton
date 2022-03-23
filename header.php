@@ -35,7 +35,7 @@ $_SESSION['gebruikeruserlevel'] = 0;
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand mt-2 mt-lg-0" href="index.php">
-                <img style="max-width: 100px;" src="img/Lays-Logo.png" alt="logo">
+                <img style="max-width: 100px;" src="img/logo_leergeld.png" alt="logo">
             </a>
             <!-- Toggle button -->
             <button

@@ -1,6 +1,9 @@
 <?php 
 require "header.php";
 ?>
+<div class="header_img">
+    <h1>Kortingspassen</h1>
+</div>
 <div class="kaart_container">
     <?php
     $x = 10;
@@ -14,8 +17,7 @@ require "header.php";
                     <div class='card-body Jumbo'>
                         <h3>$bedrijfsnaam</h3>
                     </div>
-                  </div></a>
-                  <br>";
+                  </div></a>";
             $x = $x - 1;
         }
         ?>

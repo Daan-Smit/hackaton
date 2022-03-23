@@ -1,52 +1,105 @@
-.kaart_container {
-  max-width: 400px;
-  padding: 25px;
-  /* deze alleen op telefoon */
-  /* margin-left: 15px !important;
-  margin-right: 15px !important; */
-  margin-bottom: 15px !important;
-  margin-top: 15px !important;
-  margin: auto;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  border-radius: 10px;
+.header_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 90px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/Leergeld_Nederland_Zwemles_1.png");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/Leergeld_Nederland_Zwemles_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  height: 350px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.header_img h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-weight: 100;
+  font-size: 40;
+  padding-bottom: 30px;
+  color: white;
+}
+
+@media (min-width: 320px) {
+  .kaart_container {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 481px) {
+  .kaart_container {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .kaart_container {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+  }
 }
 
 .kaart_container .kaart_box {
-  max-width: 400px;
   margin: auto;
 }
 
 .kaart_container .kaart_box .card {
   text-align: center;
+  margin: 20px;
 }
 
-.kaart_container .kaart_box .card h3 {
+.kaart_container .kaart_box .card .Jumbo {
+  background-color: #EEB717;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.kaart_container .kaart_box .card .Jumbo h3 {
   margin: 0px;
-}
-
-.kaart_container .kaart_box .Jumbo {
-  background-color: #eeb717;
-  border-radius: 10px;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.kaart_container .kaart_box .Gamma {
-  background-color: #003978;
-  border-radius: 10px;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.kaart_container .kaart_box .Blokker {
-  background-color: #f58220;
-  border-radius: 10px;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
 }
 /*# sourceMappingURL=index.css.map */
