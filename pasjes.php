@@ -4,7 +4,7 @@ require "header.php";
 
     <section>
     <div>
-        <h1>Dit is de Home Pagina</h1>
+        <h1>Dit is de Pasjes pagina</h1>
     </div>
     </section>
 
