@@ -64,38 +64,6 @@ function checkMail($conn, $email){
     mysqli_stmt_close($stmt);
 }
 
-//We maken een user aan, aan de hand van prepare statements.
-function createUser($conn, $email, $wachtwoord, $userlevel){
-    session_start();
-    $sql = "INSERT INTO gebruiker (gebruikermail, gebruikerpass, gebruikeruserlevel) VALUES (?, ?, ?);";
-    $stmt = mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt, $sql)){
-    header("location: ../signup.php?error=stmtfailed");
-    exit();
-    }
-    //Hier hashen we het wachtwoord voor de veiligheid.
-    $hashedWachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($stmt, "ssi", $email, $hashedWachtwoord, $userlevel);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-
-    //Hier stuuren we een mail naar de nieuwe gebruiker met zijn/haar inlog gegevens
-        $mailto = $email;
-        $onderwerp = "Login gegevens";
-        $wachtwoord = $wachtwoord;
-        $tekst = "Je kan inloggen met het email addres waar deze mail naartoe is verzonden en dit wachtwoord: <br />" .
-        "$wachtwoord";
-        $mailfrom = "From: anthony.ross@rocdeleijgraaf.nl";
-        if(mail($mailto, $onderwerp, $tekst, $mailfrom)){
-            header("location: ../signup.php?error=mailsend");
-            exit();
-        } else{
-           header("location: ../signup.php?error=stmterror");
-            exit(); 
-        }
-}
-
 //Checkt of alle vakken zijn ingevult
 function emptyInputSignup($email, $userlevel){
 $result = false;
@@ -174,4 +142,71 @@ function loginUser($conn, $email, $wachtwoord){
         exit();
     }
     
+}
+
+//We maken een user aan, aan de hand van prepare statements.
+function createUser($conn, $email, $wachtwoord, $userlevel){
+    session_start();
+    $sql = "INSERT INTO gebruiker (gebruikermail, gebruikerpass, gebruikeruserlevel) VALUES (?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+    header("location: ../signup.php?error=stmtfailed");
+    exit();
+    }
+    //Hier hashen we het wachtwoord voor de veiligheid.
+    $hashedWachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($stmt, "ssi", $email, $hashedWachtwoord, $userlevel);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    //Hier stuuren we een mail naar de nieuwe gebruiker met zijn/haar inlog gegevens
+        $mailto = $email;
+        $onderwerp = "Login gegevens";
+        $wachtwoord = $wachtwoord;
+        $tekst = "Je kan inloggen met het email addres waar deze mail naartoe is verzonden en dit wachtwoord: <br />" .
+        "$wachtwoord";
+        $mailfrom = "From: anthony.ross@rocdeleijgraaf.nl";
+        if(mail($mailto, $onderwerp, $tekst, $mailfrom)){
+            header("location: ../signup.php?error=mailsend");
+            exit();
+        } else{
+           header("location: ../signup.php?error=stmterror");
+            exit(); 
+        }
+}
+
+function insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, $imageContent, $status, $befrijflink, $bedrijfkoring, $bedrijfdonatie, $bedrijfkleurcode){
+    //Check userlevel opnieuw
+    $sql = "INSERT INTO bedrijf (bedrijfnaam, bedrijfslug, bedrijflogo, bedrijfbeschrijving, bedrijfkorting, bedrijfdonatie, bedrijfstatus, bedrijflink, bedrijfkleurcode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+    header("location: ../registrerenbedrijven.php?error=stmtfailed");
+    exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssbsddiss", $bedrijfnaam, $bedrijfslug, $imageContent, $bedrijfbeschrijving, $bedrijfkoring, $bedrijfdonatie,  $status, $befrijflink, $bedrijfkleurcode);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../registrerenbedrijven.php?error=succes");
+    exit();
+}
+
+function bedrijvenophalen($conn){
+    $sql = "SELECT * FROM bedrijf;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+    header("location: ../signup.php?error=stmtfailed");
+    exit();
+    }
+    mysqli_stmt_execute($stmt);
+    $resultData = mysqli_stmt_get_result($stmt);
+    if($row = mysqli_fetch_assoc($resultData)){
+            return $row;
+        }else{
+            $result = false;
+            return $result;
+        }
+
+    mysqli_stmt_close($stmt);
 }
