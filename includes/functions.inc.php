@@ -192,7 +192,7 @@ function loginUser($conn, $id_mail, $wachtwoord){
         exit();
     }elseif($checkWachtwoord === true){
         session_start();
-        $_SESSION["userId"] = $uidExists['id'];
+        $_SESSION["gebruikeruserlevel"] = $uidExists['gebruikeruserlevel'];
         header("location: ../index.php");
         exit();
     }
