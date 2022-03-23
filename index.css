@@ -1,0 +1,53 @@
+.kaart_container {
+  max-width: 400px;
+  padding: 25px;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.kaart_container .kaart_box {
+  max-width: 400px;
+  margin: auto;
+}
+
+.kaart_container .kaart_box .card {
+  text-align: center;
+}
+
+.kaart_container .kaart_box .card h3 {
+  margin: 0px;
+}
+
+.kaart_container .kaart_box .Jumbo {
+  background-color: #EEB717;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.kaart_container .kaart_box .Gamma {
+  background-color: #003978;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.kaart_container .kaart_box .Blokker {
+  background-color: #F58220;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */

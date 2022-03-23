@@ -21,6 +21,8 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 <?php 
@@ -30,26 +32,42 @@ $_SESSION['gebruikeruserlevel'] = 0;
 }
 
 ?>
-    <nav>
-        <a href="index.php">
-            <img style="max-width: 100px;" src="img/Lays-Logo.png" alt="logo">
-        </a>
-            <ul>
-                <li><a href="index.php">Home</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-2 mt-lg-0" href="index.php">
+                <img style="max-width: 100px;" src="img/Lays-Logo.png" alt="logo">
+            </a>
+            <!-- Toggle button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
 
-                <?php 
-                if ($_SESSION['gebruikeruserlevel'] === 0){
-                    echo '<li><a href="contact.php">Contact</a></li>';
-                    echo '<li><a href="login.php">Inloggen</a></li>';
-                }elseif($_SESSION['gebruikeruserlevel'] >= 1){
-                    echo '<li><a href="profile.php">Mijn profiel</a></li>';
-                    echo '<li><a href="pasjes.php">Mijn pasjes</a></li>';
-                }elseif($_SESSION['gebruikeruserlevel'] === 5){
-                    echo '<li><a href="signup.php">Registreren</a></li>';
-                }
-                ?>
-            </ul>
-        <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+
+                    <?php 
+                    if ($_SESSION['gebruikeruserlevel'] === 0){
+                        echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
+                    }elseif($_SESSION['gebruikeruserlevel'] >= 1){
+                        echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="pasjes.php">Mijn pasjes</a></li>';
+                    }elseif($_SESSION['gebruikeruserlevel'] === 5){
+                        echo '<li class="nav-item"><a class="nav-link" href="signup.php">Registreren</a></li>';
+                    }
+                    ?>
+                </ul>
+                
+            </div>
         </div>
     </nav>
     <div>

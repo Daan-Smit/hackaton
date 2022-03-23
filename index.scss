@@ -1,0 +1,47 @@
+.kaart_container{
+    max-width: 400px;
+    padding: 25px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    margin-bottom: 15px !important;
+    align-items: center;
+    margin: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+
+
+    .kaart_box{
+        max-width: 400px;
+        margin: auto;
+        .card{
+            text-align: center;   
+            h3{
+                margin: 0px;
+            }  
+        }
+        .Jumbo{
+            background-color: #EEB717;
+            border-radius: 10px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .Gamma{
+            background-color: #003978;
+            border-radius: 10px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .Blokker{
+            background-color: #F58220;
+            border-radius: 10px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+}
+
