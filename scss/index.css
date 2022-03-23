@@ -1,12 +1,11 @@
 .kaart_container {
   max-width: 400px;
   padding: 25px;
-  margin-left: 15px !important;
-  margin-right: 15px !important;
+  /* deze alleen op telefoon */
+  /* margin-left: 15px !important;
+  margin-right: 15px !important; */
   margin-bottom: 15px !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-top: 15px !important;
   margin: auto;
   border-style: solid;
   border-width: 2px;
@@ -28,7 +27,7 @@
 }
 
 .kaart_container .kaart_box .Jumbo {
-  background-color: #EEB717;
+  background-color: #eeb717;
   border-radius: 10px;
   color: white;
   font-size: 30px;
@@ -44,7 +43,7 @@
 }
 
 .kaart_container .kaart_box .Blokker {
-  background-color: #F58220;
+  background-color: #f58220;
   border-radius: 10px;
   color: white;
   font-size: 30px;

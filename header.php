@@ -22,7 +22,7 @@
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
 
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="scss/index.css" />
 </head>
 <body>
 <?php 
