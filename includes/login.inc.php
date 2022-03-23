@@ -2,12 +2,14 @@
 //Plaats hier de login form handling
 
 if(isset($_POST["inlog-submit"])){
-    $id_mail = $_POST["id_mail"];
-    $wachtwoord = $_POST["wachtwoord"];
+    $email = $_POST["gebruiker_mail"];
+    $wachtwoord = $_POST["gebruiker_wachtwoord"];
+
+    /////////////////////////////////////////////////
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputLogin($id_mail, $wachtwoord) !== false) {
+    if (emptyInputLogin($email, $wachtwoord) !== false) {
         header("location: ../login.php?error=emptyinput");
         exit();
     }

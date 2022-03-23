@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -23,24 +25,27 @@
 <body>
 <?php 
 session_start();
+if(isset($_SESSION['gebruikeruserlevel'])){
+$_SESSION['gebruikeruserlevel'] = 0;
+}
+
 ?>
     <nav>
         <a href="index.php">
             <img style="max-width: 100px;" src="img/Lays-Logo.png" alt="logo">
         </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link"  href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link"  href="style.php">TEST</a></li>
+            <ul>
+                <li><a href="index.php">Home</a></li>
 
                 <?php 
-                if (isset($_SESSION['userId'])){
-                    //Wanneer je een userlevel hebt
-                    echo '<li class="nav-item"><a class="nav-link"  href="profile.php">Mijn profiel</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link"  href="pasjes.php">Mijn pasjes</a></li>';
-                }else{
-                    //wanneer je niet ingelogd bent
-                    echo '<li class="nav-item"><a class="nav-link"  href="contact.php">Contact</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link"  href="login.php">Inloggen</a></li>';
+                if ($_SESSION['gebruikeruserlevel'] === 0){
+                    echo '<li><a href="contact.php">Contact</a></li>';
+                    echo '<li><a href="login.php">Inloggen</a></li>';
+                }elseif($_SESSION['gebruikeruserlevel'] >= 1){
+                    echo '<li><a href="profile.php">Mijn profiel</a></li>';
+                    echo '<li><a href="pasjes.php">Mijn pasjes</a></li>';
+                }elseif($_SESSION['gebruikeruserlevel'] === 5){
+                    echo '<li><a href="signup.php">Registreren</a></li>';
                 }
                 ?>
             </ul>
