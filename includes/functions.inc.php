@@ -76,13 +76,24 @@ function createUser($conn, $email, $wachtwoord, $userlevel){
     //Hier hashen we het wachtwoord voor de veiligheid.
     $hashedWachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssi", $email, $wachtwoord, $userlevel);
+    mysqli_stmt_bind_param($stmt, "ssi", $email, $hashedWachtwoord, $userlevel);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    $_SESSION['wachtwoord'] = $wachtwoord;
-    $_SESSION['usermail'] = $email;
-    header("location: ../signup.php?error=none");
-    exit();
+
+    //Hier stuuren we een mail naar de nieuwe gebruiker met zijn/haar inlog gegevens
+        $mailto = $email;
+        $onderwerp = "Login gegevens";
+        $wachtwoord = $wachtwoord;
+        $tekst = "Je kan inloggen met het email addres waar deze mail naartoe is verzonden en dit wachtwoord: <br />" .
+        "$wachtwoord";
+        $mailfrom = "From: anthony.ross@rocdeleijgraaf.nl";
+        if(mail($mailto, $onderwerp, $tekst, $mailfrom)){
+            header("location: ../signup.php?error=mailsend");
+            exit();
+        } else{
+           header("location: ../signup.php?error=stmterror");
+            exit(); 
+        }
 }
 
 //Checkt of alle vakken zijn ingevult

@@ -12,15 +12,10 @@ require "header.php";
         <?php 
         //Hier worden alle errors en andere berichten weergeven
         if(isset($_GET['error'])){
-            if ($_GET['error'] == "none") {
+
+            if ($_GET['error'] == "mailsend") {
                 //Al deze dingen moeten automatisch gemailed worden naar de eind gebruikers
-                $wachtwoord = $_SESSION['wachtwoord'];
-                $email = $_SESSION['usermail'];
-                echo "<p>De gebruiker is goed geregistreerd dit zijn zijn inlog gegevens:</p>";
-                echo "<h5>Klantemail: $email</h5>";
-                echo "<h5>Wachtwoord: $wachtwoord</h5>";
-                echo "<p>Onthoud deze goed, als je je wachtwoord wilt veranderen klik op de onderstaande link: </p>";
-                echo "<a href='changepass.php?usermail=$email' target='blank'>Verander wachtwoord Link</a>";
+                echo "We hebben een mail met de inloggegevens naar de gebruiker gestuurd.";
             }elseif($_GET['error'] == "emptyinput"){
                 echo "Vul alle velden in!";
             }elseif($_GET['error'] == "email"){
