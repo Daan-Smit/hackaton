@@ -185,7 +185,7 @@ function insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, 
     exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssbsddiss", $bedrijfnaam, $bedrijfslug, $imageContent, $bedrijfbeschrijving, $bedrijfkoring, $bedrijfdonatie,  $status, $befrijflink, $bedrijfkleurcode);
+    mysqli_stmt_bind_param($stmt, "ssssddiss", $bedrijfnaam, $bedrijfslug, $imageContent, $bedrijfbeschrijving, $bedrijfkoring, $bedrijfdonatie,  $status, $befrijflink, $bedrijfkleurcode);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../registrerenbedrijven.php?error=succes");

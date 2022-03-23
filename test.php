@@ -21,57 +21,13 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
 </head>
 
-    <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-          src="img/Lays-Logo.png"
-          height="15"
-          alt="MDB Logo"
-          loading="lazy"
-        />
-      </a>
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
+<?php 
+require_once "includes/dbh.inc.php";
+require_once "includes/functions.inc.php";
+$resultaten = bedrijvenophalen($conn);
+echo $resultaten['bedrijfnaam'];
+?>
     
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-    </div>
-    <!-- Collapsible wrapper -->
-
-    
-  </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
-
 <?php
 require "footer.php";
 ?>
