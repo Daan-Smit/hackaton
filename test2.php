@@ -2,6 +2,7 @@
     <div>
         Jumbologo
         <div class="row">
+        <div></div>
         Knop 
         Favoriet
         </div>
