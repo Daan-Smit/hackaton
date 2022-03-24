@@ -38,12 +38,12 @@ require_once "includes/functions.inc.php";
                     </div>
                     <div class="row">
                         <div class="col inhoud">
-                            <p>Dit bedrijf heeft in totaal €<?php echo $row['bedrijftotaaldonatie'] ;?> gedoneerd.
+                            <p>Dit bedrijf heeft in totaal € <b><?php echo $row['bedrijftotaaldonatie'] ;?></b> gedoneerd.
                         </div>
                     </div>
                     <div class="row">
                         <div class="col inhoud">
-                            <p>Dit bedrijf heeft in totaal €<?php echo $row['bedrijftotaalkorting'] ;?> korting gegeven.
+                            <p>Dit bedrijf heeft in totaal € <b><?php echo $row['bedrijftotaalkorting'] ;?></b> korting gegeven.
                         </div>
                     </div>
                 </div>

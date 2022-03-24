@@ -21,14 +21,15 @@ require "header.php";
             <input type="color" name="bedrijfkleurcode"><br>
             <button type="submit" name="submit-bedrijf">Registreer Bedrijf</button>
         </form>
-    </div>
     <?php 
-    if(isset($_GET['error'])){
-        if($_GET['error'] == "succes"){
-            echo "invoeren gelukt";
+        if(isset($_GET['error'])){
+            if($_GET['error'] == "succes"){
+                echo "invoeren gelukt";
+            }
         }
-    }
     ?>
+    </div>
+
     </section>
 
 <?php

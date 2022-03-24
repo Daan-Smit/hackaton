@@ -158,21 +158,23 @@ function createUser($conn, $email, $wachtwoord, $userlevel){
     mysqli_stmt_bind_param($stmt, "ssi", $email, $hashedWachtwoord, $userlevel);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+    header("location: ../signup.php?error=mailsend&wachtwoord=$wachtwoord");
+    exit();
 
     //Hier stuuren we een mail naar de nieuwe gebruiker met zijn/haar inlog gegevens
-        $mailto = $email;
-        $onderwerp = "Login gegevens";
-        $wachtwoord = $wachtwoord;
-        $tekst = "Je kan inloggen met het email addres waar deze mail naartoe is verzonden en dit wachtwoord: <br />" .
-        "$wachtwoord";
-        $mailfrom = "From: anthony.ross@rocdeleijgraaf.nl";
-        if(mail($mailto, $onderwerp, $tekst, $mailfrom)){
-            header("location: ../signup.php?error=mailsend");
-            exit();
-        } else{
-           header("location: ../signup.php?error=stmterror");
-            exit(); 
-        }
+        // $mailto = $email;
+        // $onderwerp = "Login gegevens";
+        // $wachtwoord = $wachtwoord;
+        // $tekst = "Je kan inloggen met het email addres waar deze mail naartoe is verzonden en dit wachtwoord: <br />" .
+        // "$wachtwoord";
+        // $mailfrom = "From: anthony.ross@rocdeleijgraaf.nl";
+        // if(mail($mailto, $onderwerp, $tekst, $mailfrom)){
+        //     header("location: ../signup.php?error=mailsend");
+        //     exit();
+        // } else{
+        //    header("location: ../signup.php?error=stmterror");
+        //     exit(); 
+        // }
 }
 
 function insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, $bedrijflogo, $status, $befrijflink, $bedrijfkoring, $bedrijfdonatie, $bedrijfkleurcode){

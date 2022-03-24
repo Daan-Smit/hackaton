@@ -55,16 +55,18 @@ $_SESSION['gebruikeruserlevel'] = 5;
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 
                     <?php 
-
+                    //default
                     if ($_SESSION['gebruikeruserlevel'] === 1){
                         echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
                     }
+                    //ingelogde gebruiker
                     if($_SESSION['gebruikeruserlevel'] >= 2){
                         echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="pasjes.php">Mijn pasjes</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="qrcode.php">QR Code</a></li>';
                     }
+                    //admin
                     if($_SESSION['gebruikeruserlevel'] === 5){
                         echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
