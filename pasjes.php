@@ -1,8 +1,18 @@
 <?php 
 require "header.php";
 ?>
+
 <div class="kaart_container">
+
     <div class="kaart_box">
+            <div style="text-align: center;">
+                <h3>Filteren op:</h3>
+                <form class="filter-knoppen" action="pasjes.php" method="GET">
+                    <button name="filter" value="favoriet">Favoriet</button>
+                    <button name="filter" value="nieuw">Nieuw</button>
+                    <button name="filter" value="korting">Korting</button>
+                </form>
+            </div>
         <?php 
         require_once "includes/dbh.inc.php";
         require_once "includes/functions.inc.php";
