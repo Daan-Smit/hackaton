@@ -2,13 +2,13 @@
 require "header.php";
 ?>
 
-    <section>
-        <h2>Inloggen</h2>
-        <form action="includes/wachtwoord_vergeten.inc.php" method="post">
-            <input type="text" name="email_ww_vergeten" placeholder="Email addres" placeholder="Email">
-            <button type="submit" name="email_ww_vergeten-submit">wachtwoord aanvragen</button>
+    <div class="container main">
+        <h2>Wachtwoord vergeten</h2>
+        <form action="wachtwoord_wijzigen.php" method="post">
+            <input type="text" name="email_ww_vergeten" placeholder="Email addres" placeholder="Email"><br>
+            <button class="btn btn-dark" type="submit" name="email_ww_vergeten-submit">wachtwoord aanvragen</button>
         </form>
-    </section>
+    </div>
 
 <?php
 require "footer.php";
