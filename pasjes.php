@@ -8,8 +8,8 @@ require "header.php";
             <div style="text-align: center;">
                 <h3>Filteren op:</h3>
                 <form class="filter-knoppen" action="pasjes.php" method="GET">
-                    <button class="btn btn-dark" name="filter" value="favoriet">Favoriet</button>
-                    <button class="btn btn-dark" name="filter" value="nieuw">Nieuw</button>
+                    <!-- <button class="btn btn-dark" name="filter" value="favoriet">Favoriet</button>
+                    <button class="btn btn-dark" name="filter" value="nieuw">Nieuw</button> -->
                     <button class="btn btn-dark" name="filter" value="korting">Korting</button>
                 </form>
             </div>
@@ -23,7 +23,7 @@ require "header.php";
         if ($data->num_rows > 0) {
           while($row = $data->fetch_assoc()) {
         ?>
-          <a href="infobedrijf.php?bedrijf=<?php echo $row["bedrijfslug"]; ?>">
+          <a href="info_bedrijf.php?bedrijf=<?php echo $row["bedrijfslug"]; ?>">
             <div class='card' style="background-color: <?php echo $row["bedrijfkleurcode"]; ?>!important;" >
                     <div class='card-body' >
                         <div class='row'>
@@ -40,14 +40,32 @@ require "header.php";
         <?php
           }
         }    
-        }elseif($_GET['filter'] == 'favoriet'){
-
+        }elseif($_GET['filter'] === 'korting'){
+        $data = bedrijvenophalenkorting($conn);
+        if ($data->num_rows > 0) {
+          while($row = $data->fetch_assoc()) {
+        ?>
+          <a href="info_bedrijf.php?bedrijf=<?php echo $row["bedrijfslug"]; ?>">
+            <div class='card' style="background-color: <?php echo $row["bedrijfkleurcode"]; ?>!important;" >
+                    <div class='card-body' >
+                        <div class='row'>
+                            <div class='col-6'>
+                                <span><?php echo $row["bedrijfnaam"]; ?><span>
+                            </div>
+                            <div class='col-6'>
+                                <span class='procent'><?php echo $row["bedrijfkorting"]; ?> %</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+          </a> 
+        <?php
+          }
+        }  
         }
-
         ?>
     </div>
 </div>
 
 <?php
 require "footer.php";
-?>

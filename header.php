@@ -68,7 +68,7 @@ $_SESSION['gebruikeruserlevel'] = 5;
                     if($_SESSION['gebruikeruserlevel'] === 5){
                         echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
-                        echo '<li class="nav-item"><a class="nav-link" href="signup.php">Registreren</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="registrerenbedrijven.php">Registreren</a></li>';
                     }
 
 
