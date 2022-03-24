@@ -34,6 +34,35 @@
         color: white;
     }
   }
+  .header_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 90px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("../img/Leergeld_Nederland_Fiets_01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    height: 350px;
+    border-radius: 0px 0px 20px 20px;
+    h1 {
+      text-align: center;
+      font-weight: 100;
+      font-size: 40;
+      padding-bottom: 30px;
+      color: white;
+    }
+    h2 {
+        text-align: center;
+        color: white;
+    }
+  }
 //einde styling van header
 
 //styling van homepage en forms
@@ -135,3 +164,7 @@
     }
 }
 //einde styling van info_bedrijf.php
+
+//styling van qrcode.php
+
+//einde styling van qrcode.php
