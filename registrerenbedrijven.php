@@ -19,7 +19,7 @@ require "header.php";
             <input type="text" name="bedrijfkorting" placeholder="% Korting"><br>
             <input type="text" name="bedrijfdonatie" placeholder="% donatie"><br>
             <input type="color" name="bedrijfkleurcode"><br>
-            <button type="submit" name="submit-bedrijf">Registreer Bedrijf</button>
+            <button class="btn" type="submit" name="submit-bedrijf">Registreer Bedrijf</button>
         </form>
     <?php 
         if(isset($_GET['error'])){

@@ -7,8 +7,9 @@ require "header.php";
         <form action="includes/login.inc.php" method="post">
             <input type="text" name="gebruiker_mail" placeholder="Email addres"><br>
             <input type="password" name="gebruiker_wachtwoord" placeholder="Wachtwoord..."><br>
-            <button type="submit" name="inlog-submit">Inloggen</button>
+            <button class="btn btn-dark" type="submit" name="inlog-submit">Inloggen</button>
         </form>
+        <a href="wachtwoord_vergeten.php">Wachtwoord vergeten?</a>
     </div>
         <?php
 
@@ -24,7 +25,6 @@ require "header.php";
             }elseif($_GET['error'] == "incorrect_email"){
                 echo "Dit is geen bestaand klantnummer of email adres.";
             }
-            
         }
         ?>
 
