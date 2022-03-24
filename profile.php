@@ -1,7 +1,7 @@
 <?php 
 require "header.php";
 ?>
-<div class="header_img">
+<div class="header_img_2">
     <h2>Mijn profiel</h2>
 </div>
 <div class="container main">
