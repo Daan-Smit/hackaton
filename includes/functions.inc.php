@@ -175,7 +175,7 @@ function createUser($conn, $email, $wachtwoord, $userlevel){
         }
 }
 
-function insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, $imageContent, $status, $befrijflink, $bedrijfkoring, $bedrijfdonatie, $bedrijfkleurcode){
+function insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, $bedrijflogo, $status, $befrijflink, $bedrijfkoring, $bedrijfdonatie, $bedrijfkleurcode){
     //Check userlevel opnieuw
     $sql = "INSERT INTO bedrijf (bedrijfnaam, bedrijfslug, bedrijflogo, bedrijfbeschrijving, bedrijfkorting, bedrijfdonatie, bedrijfstatus, bedrijflink, bedrijfkleurcode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
@@ -184,7 +184,7 @@ function insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, 
     exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssddiss", $bedrijfnaam, $bedrijfslug, $imageContent, $bedrijfbeschrijving, $bedrijfkoring, $bedrijfdonatie,  $status, $befrijflink, $bedrijfkleurcode);
+    mysqli_stmt_bind_param($stmt, "ssssddiss", $bedrijfnaam, $bedrijfslug, $bedrijflogo, $bedrijfbeschrijving, $bedrijfkoring, $bedrijfdonatie,  $status, $befrijflink, $bedrijfkleurcode);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../registrerenbedrijven.php?error=succes");
@@ -216,3 +216,24 @@ function bedrijvenophalenkorting($conn){
     return $resultData;
     mysqli_stmt_close($stmt);
 }
+
+function bedrijfophalen($conn, $bedrijfslug){
+    $sql = "SELECT * FROM bedrijf WHERE bedrijfslug = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+    header("location: ../signup.php?error=stmtfailed");
+    exit();
+    }
+    mysqli_stmt_bind_param($stmt, "s", $bedrijfslug);
+    mysqli_stmt_execute($stmt);
+    $resultData = mysqli_stmt_get_result($stmt);
+    if($row = mysqli_fetch_assoc($resultData)){
+            return $row;
+        }else{
+            header("location: pasjes.php?error=foutbedrijf");
+            exit();
+        }
+    mysqli_stmt_close($stmt);
+}
+
+// bestanden via library string harcodef afbeeldingen invoegen

@@ -6,14 +6,7 @@ if(isset($_POST['submit-bedrijf'])){
 
     //Ophalen bedrijfslogo
     //Maak hier nog een functie van
-    $check = getimagesize($_FILES['bedrijflogo']['tmp_name']);
-    if($check !== false){
-        $image = $_FILES['bedrijflogo']['tmp_name'];
-        $imageContent = addslashes(file_get_contents($image));
-    }else{
-        header("location: ../login.php?error=voer een afbeelding bestand in");
-        exit();
-    }
+    $bedrijflogo = $_POST['bedrijflogo'];
 
     //Status, wanneer 1 is de status van de klant actief
     //Maak hier een functie van
@@ -41,6 +34,6 @@ if(isset($_POST['submit-bedrijf'])){
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
-    insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, $imageContent, $status, $befrijflink, $bedrijfkorting, $bedrijfdonatie, $bedrijfkleurcode);
+    insertbedrijf($conn, $bedrijfnaam, $bedrijfslug, $bedrijfbeschrijving, $bedrijflogo, $status, $befrijflink, $bedrijfkorting, $bedrijfdonatie, $bedrijfkleurcode);
 }
 ?>
