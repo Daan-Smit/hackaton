@@ -2,12 +2,12 @@
 require "header.php";
 //Dit is het klantenregistreer systeem waar admins/de stichting klanten kunnen registreren.
 ?>
-    <section>
+    <div class="container main">
         <h2>Registreren</h2>
         <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="email" placeholder="Email">
-            <input type="text" name="userlevel" placeholder="Userlevel">
-            <button type="submit" name="registreer-submit">Registreer</button>
+            <input type="text" name="email" placeholder="Email"><br>
+            <input type="text" name="userlevel" placeholder="Userlevel"><br>
+            <button class="btn btn-dark" type="submit" name="registreer-submit">Registreer</button>
         </form>
         <?php 
         //Hier worden alle errors en andere berichten weergeven
@@ -27,8 +27,7 @@ require "header.php";
             }
         }
     ?>
-
-    </section>
+    </div>
 
 
 <?php
