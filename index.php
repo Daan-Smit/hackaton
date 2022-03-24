@@ -17,7 +17,7 @@ require_once "includes/functions.inc.php";
         <button type="submit" class="btn">Doneer nu zelf</button>
     </form>
 
-    <h2 style="margin-top: 50px;">Bedankt sponsoren</h2>
+    <h2 style="margin-top: 50px;">Bedankt sponsoren!</h2>
     
     <div class="container opbrengst">
         <?php

@@ -29,7 +29,7 @@ if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5)
                     </div>
                     <div class="row">
                         <div class="col inhoud">
-                            <a class="knop" href="qrcode.php?qrcode=<?php echo $row['bedrijflink'] ;?>">Genereer QRcode</a>
+                            <a class="knop" href="qrcode.php?bedrijf=<?php echo $bedrijf ;?>&qrcode=<?php echo $row['bedrijflink'] ;?>">Genereer QRcode</a>
                         </div>
                     </div>
                     <div class="row">
