@@ -43,6 +43,16 @@ require "header.php";
                     pulvinar augue.</p>
             </div>
         </div>
+        <div class="row">
+            <div class="col inhoud">
+                <p>Dit bedrijf heeft in totaal €<!--variabele geldaantal--> gedoneerd.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col inhoud">
+                <p>Dit bedrijf heeft in totaal €<!--variabele geldaantal--> korting gegeven.
+            </div>
+        </div>
     </div>
 </div>
 
