@@ -16,6 +16,9 @@ require "header.php";
         <?php 
         require_once "includes/dbh.inc.php";
         require_once "includes/functions.inc.php";
+        ?>
+        <?php
+        if(!isset($_GET['filter'])){
         $data = bedrijvenophalen($conn);
         if ($data->num_rows > 0) {
           while($row = $data->fetch_assoc()) {
@@ -36,7 +39,11 @@ require "header.php";
           </a> 
         <?php
           }
+        }    
+        }elseif($_GET['filter'] == 'favoriet'){
+
         }
+
         ?>
     </div>
 </div>
