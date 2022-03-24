@@ -1,5 +1,7 @@
 <?php 
 require "header.php";
+require_once "includes/dbh.inc.php";
+require_once "includes/functions.inc.php";
 ?>
 <div class="header_img">
     <h1>Welkom bij<br>Stichting Leergeld</h1>
@@ -14,27 +16,27 @@ require "header.php";
     <form action="doneren.php">
         <button type="submit" class="btn">Doneer nu zelf</button>
     </form>
-    <p>Onze sponsors</p>
+
+    <h2 style="margin-top: 50px;">Bedankt sponsoren</h2>
     
     <div class="container opbrengst">
+        <?php
+        $data = bedrijvenophalen($conn);
+        if ($data->num_rows > 0) {
+          while($row = $data->fetch_assoc()) {
+        ?>
         <!--repeat-->
         <div class="row">
             <div class="col inhoud">
-                <img class="logo-home" src="img/jumbo_logo.png">
+                <img class="logo-home" src="img/<?php echo $row["bedrijflogo"] ;?>">
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col inhoud">
-                <img class="logo-home" src="img/jumbo_logo.png">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col inhoud">
-                <img class="logo-home" src="img/jumbo_logo.png">
-            </div>
-        </div>
+
+            <?php 
+            }
+        }
+            ?>
     </div>
     <!--einde repeat-->
 </div>
