@@ -5,28 +5,28 @@ require "header.php";
     <h1>Kortingspassen</h1>
 </div>
 <div class="kaart_container">
+    <?php
+    $x = 10;
+    $bedrijfsnaam = "Jumbo";
+    $link = '#';
+    $kortingspercentage = "5%";
+    ?>
     <div class="kaart_box">
         <?php 
-        require_once "includes/dbh.inc.php";
-        require_once "includes/functions.inc.php";
-        $data = bedrijvenophalen($conn);
-        if ($data->num_rows > 0) {
-          while($row = $data->fetch_assoc()) {
-        ?>
-            <div class='card' >
-                    <div class='card-body' style="background-color: <?php echo $row["bedrijfkleurcode"]; ?>!important;">
+        while($x >= 1){
+            echo "<div class='card '>
+                    <div class='card-body'>
                         <div class='row'>
                             <div class='col-6'>
-                                <span><?php echo $row["bedrijfnaam"]; ?><span>
+                                <span>$bedrijfsnaam<span>
                             </div>
                             <div class='col-6'>
-                                <span class='procent'><?php echo $row["bedrijfkorting"]; ?> %</span>
+                                <span class='procent'>$kortingspercentage</span>
                             </div>
                         </div>
                     </div>
-            </div>;
-        <?php
-          }
+                  </div>";
+            $x = $x - 1;
         }
         ?>
     </div>
