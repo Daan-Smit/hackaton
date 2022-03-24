@@ -9,7 +9,7 @@ require "header.php";
             <input type="text" name="bedrijfnaam" placeholder="Bedrijfsnaam"><br>
             <input type="text" name="bedrijfslug" placeholder="Slug"><br>
             <input type="text" name="bedrijfbeschrijving" placeholder="Beschrijving"><br>
-            <input type="file" name="bedrijflogo" ><br>
+            <input type="text" name="bedrijflogo" placeholder="Logo"><br>
             <label for="status">Actief</label><br>
             <input type="radio" id="true" name="status" value="true">
             <label for="true">true</label><br>
