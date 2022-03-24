@@ -63,6 +63,7 @@ $_SESSION['gebruikeruserlevel'] = 5;
                     if($_SESSION['gebruikeruserlevel'] >= 2){
                         echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="pasjes.php">Mijn pasjes</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="qrcode.php">QR Code</a></li>';
                     }
                     if($_SESSION['gebruikeruserlevel'] === 5){
                         echo '<li class="nav-item"><a class="nav-link" href="registrerenbedrijven.php">Registreren</a></li>';
