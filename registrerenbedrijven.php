@@ -1,6 +1,12 @@
 <?php 
 require "header.php";
 ?>
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 5){
+    header("location: index.php");
+    exit();
+}
+?>
 
     <section>
     <div class="container main">

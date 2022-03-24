@@ -2,6 +2,12 @@
 require "header.php";
 //Dit is het klantenregistreer systeem waar admins/de stichting klanten kunnen registreren.
 ?>
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 5){
+    header("location: index.php");
+    exit();
+}
+?>
     <div class="container main">
         <h2>Registreren</h2>
         <form action="includes/signup.inc.php" method="post">

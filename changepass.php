@@ -2,6 +2,13 @@
 require "header.php";
 ?>
 
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5){
+    header("location: index.php");
+    exit();
+}
+?>
+
     <section>
         <h2>Verander je wachtwoord</h2>
         <form action="includes/login.inc.php" method="post">

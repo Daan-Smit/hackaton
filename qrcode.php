@@ -1,6 +1,13 @@
 <head>
     <link rel="stylesheet" href="scss/index.css" />
 </head>
+<?php 
+session_start();
+if($_SESSION['gebruikeruserlevel'] != 2){
+    header("location: index.php");
+    exit();
+}
+?>
 
 <a class="terugknop" href="Info_bedrijf.php">
     <svg xmlns="http://www.w3.org/2000/svg" width="90px" height="90px" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">

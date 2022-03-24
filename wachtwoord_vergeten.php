@@ -1,6 +1,12 @@
 <?php 
 require "header.php";
 ?>
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 1){
+    header("location: index.php");
+    exit();
+}
+?>
 
     <div class="container main">
         <h2>Wachtwoord vergeten</h2>

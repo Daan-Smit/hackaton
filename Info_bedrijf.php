@@ -3,6 +3,12 @@ require "header.php";
 require_once "includes/dbh.inc.php";
 require_once "includes/functions.inc.php";
 ?>
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 2){
+    header("location: index.php");
+    exit();
+}
+?>
 <?php
 //Hier check je voor een get
         if(!isset($_GET['bedrijf'])){

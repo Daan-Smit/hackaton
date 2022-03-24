@@ -1,6 +1,12 @@
 <?php 
 require "header.php";
 ?>
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 2){
+    header("location: index.php");
+    exit();
+}
+?>
 
 <div class="kaart_container">
 

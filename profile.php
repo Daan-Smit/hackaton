@@ -1,6 +1,12 @@
 <?php 
 require "header.php";
 ?>
+<?php 
+if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5){
+    header("location: index.php");
+    exit();
+}
+?>
 <div class="header_img_2">
     <h2>Mijn profiel</h2>
 </div>
