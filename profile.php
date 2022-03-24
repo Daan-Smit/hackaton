@@ -8,11 +8,17 @@ require "header.php";
     <form action="profiel_wachtwoord_wijzigen.php">
         <button type="submit" class="btn">Wijzig uw wachtwoord</button>
     </form>
-    <form action="index.php">
-        <button type="submit" class="btn">Uitloggen</button>
+    <form action="profile.php" method="POST">
+        <button type="submit" class="btn" name="logout">Uitloggen</button>
     </form>
 </div>
-
+<?php 
+if(isset($_POST['logout'])){
+    $_SESSION['gebruikeruserlevel'] = NULL;
+    header("location: index.php");
+    exit();
+}
+?>
 <?php
 require "footer.php";
 ?>

@@ -42,27 +42,7 @@ function uidExists($conn, $userId, $email){
     mysqli_stmt_close($stmt);
 }
 
-//Check of er al dezelfde gebruiker email bestaat aan de hand van preparestatement.
-function checkMail($conn, $email){
-        session_start();
-    $sql = "SELECT * FROM gebruiker WHERE gebruikermail = ?;";
-    $stmt = mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt, $sql)){
-    header("location: ../signup.php?error=stmtfailed");
-    exit();
-    }
-    mysqli_stmt_bind_param($stmt, "s", $email);
-    mysqli_stmt_execute($stmt);
-    $resultData = mysqli_stmt_get_result($stmt);
 
-    if($row = mysqli_fetch_assoc($resultData)){
-        return $row;
-    }else{
-        $result = false;
-        return $result;
-    }
-    mysqli_stmt_close($stmt);
-}
 
 //Checkt of alle vakken zijn ingevult
 function emptyInputSignup($email, $userlevel){
@@ -124,9 +104,31 @@ if(empty($email) || empty($wachtwoord) ){
 return $result;
 }
 
+//Check of er al dezelfde gebruiker email bestaat aan de hand van preparestatement.
+function checkMail($conn, $email){
+        session_start();
+    $sql = "SELECT * FROM gebruiker WHERE gebruikermail = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+    header("location: ../signup.php?error=stmtfailed");
+    exit();
+    }
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if($row = mysqli_fetch_assoc($resultData)){
+        return $row;
+    }else{
+        $result = false;
+        return $result;
+    }
+    mysqli_stmt_close($stmt);
+}
+
 function loginUser($conn, $email, $wachtwoord){
     $Mailbestaat = checkMail($conn, $email);
-    if($Mailbestaat === false){
+    if($Mailbestaat == false){
         header("location: ../login.php?error=incorrect_email");
         exit();
     }
@@ -158,7 +160,7 @@ function createUser($conn, $email, $wachtwoord, $userlevel){
     mysqli_stmt_bind_param($stmt, "ssi", $email, $hashedWachtwoord, $userlevel);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=mailsend&wachtwoord=$wachtwoord");
+    header("location: ../signup.php?error=mailsend");
     exit();
 
     //Hier stuuren we een mail naar de nieuwe gebruiker met zijn/haar inlog gegevens

@@ -28,7 +28,8 @@
 <?php 
 session_start();
 if(!isset($_SESSION['gebruikeruserlevel'])){
-$_SESSION['gebruikeruserlevel'] = 5;
+    //default gebruikerslevel
+    $_SESSION['gebruikeruserlevel'] = 1;
 }
 
 ?>
@@ -57,20 +58,18 @@ $_SESSION['gebruikeruserlevel'] = 5;
                     <?php 
                     //default
                     if ($_SESSION['gebruikeruserlevel'] === 1){
-                        echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
                     }
                     //ingelogde gebruiker
-                    if($_SESSION['gebruikeruserlevel'] >= 2){
-                        echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
+                    if($_SESSION['gebruikeruserlevel'] === 2){
                         echo '<li class="nav-item"><a class="nav-link" href="pasjes.php">Mijn pasjes</a></li>';
-                        echo '<li class="nav-item"><a class="nav-link" href="qrcode.php">QR Code</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
                     }
                     //admin
                     if($_SESSION['gebruikeruserlevel'] === 5){
-                        echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
-                        echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
-                        echo '<li class="nav-item"><a class="nav-link" href="registrerenbedrijven.php">Registreren</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="signup.php">Gebruikers registreren</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="registrerenbedrijven.php">Bedrijven registreren</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
                     }
 
 
