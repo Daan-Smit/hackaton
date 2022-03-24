@@ -24,8 +24,45 @@
 <?php 
 require_once "includes/dbh.inc.php";
 require_once "includes/functions.inc.php";
-echo bedrijvenophalen($conn);
+
+//Dit werkt
+// $data = bedrijvenophalen($conn);
+// if ($data->num_rows > 0) {
+//   // output data of each row
+//   while($row = $data->fetch_assoc()) {
+//     echo "bedrijfnaam: " . $row["bedrijfnaam"] . "<br>";
+//   }
+// } else {
+//   echo "0 results";
+// }
 ?>
+
+<div class="header_img">
+    <h1>Kortingspassen</h1>
+</div>
+<div class="kaart_container">
+    <div class="kaart_box">
+        <?php 
+        $data = bedrijvenophalen($conn);
+        if ($data->num_rows > 0) {
+          while($row = $data->fetch_assoc()) {
+          ?>
+            <a href='#'>
+              <div class='card' style="backgroundcolor: <?php echo $row["bedrijfkleurcode"];?>">
+                    <div class='card-body Jumbo'>
+                        <h3><?php echo $row["bedrijfnaam"];?></h3>
+                    </div>
+              </div>
+            </a>;
+            
+            <?php
+          }
+        }else {
+          echo "0 results";
+        }
+        ?>
+    </div>
+</div>
     
 <?php
 require "footer.php";
