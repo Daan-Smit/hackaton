@@ -102,9 +102,26 @@
           align-items: center;
 }
 
-.achtergrond .vak .logo .column {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.achtergrond .vak .inhoud {
+  text-align: center;
+  padding: 12px;
+}
+
+.achtergrond .vak .inhoud .knop {
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.achtergrond .vak .positie_knop {
+  text-align: center;
+}
+
+.achtergrond .vak .positie_favoriet {
+  text-align: start;
 }
 /*# sourceMappingURL=index.css.map */

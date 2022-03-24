@@ -1,33 +1,36 @@
-//styling van pasjes.php
+//styling van header
 .header_img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 90px;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ),
-    url("../img/Leergeld_Nederland_Zwemles_1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  height: 350px;
-  border-radius: 0px 0px 20px 20px;
-  h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-    font-weight: 100;
-    font-size: 40;
-    padding-bottom: 30px;
-    color: white;
+    padding: 90px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("../img/Leergeld_Nederland_Zwemles_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    height: 350px;
+    border-radius: 0px 0px 20px 20px;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      font-weight: 100;
+      font-size: 40;
+      padding-bottom: 30px;
+      color: white;
+    }
   }
-}
+//einde styling van header
+
+//styling van pasjes.php
 .kaart_container {
   @media (min-width: 320px) {
     margin: auto;
@@ -48,7 +51,6 @@
     margin-bottom: 25px;
     border-radius: 10px;
   }
-
   .card {
     text-align: center;
     margin: 20px;
@@ -76,10 +78,24 @@
         border-radius: 10px;
         padding: 25px;
         align-items: center;
-        .logo{
-            .column{
-                align-self: center;
+        .inhoud{
+            text-align: center;
+            padding: 12px;
+            .knop{
+                background: #4E9CAF;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 25px;
             }
+        }
+        .positie_knop{
+            text-align: center;
+        }
+        .positie_favoriet{
+            text-align: start;
         }
     }
 }
