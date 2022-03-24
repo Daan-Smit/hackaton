@@ -45,14 +45,9 @@
 
 @media (min-width: 320px) {
   .kaart_container {
-    max-width: 90%;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 10px;
   }
 }
 
@@ -62,9 +57,6 @@
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: gray;
     border-radius: 10px;
   }
 }
@@ -75,31 +67,23 @@
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
     border-radius: 10px;
   }
 }
 
-.kaart_container .kaart_box {
-  margin: auto;
-}
-
-.kaart_container .kaart_box .card {
+.kaart_container .card {
   text-align: center;
   margin: 20px;
-}
-
-.kaart_container .kaart_box .card .Jumbo {
   background-color: #EEB717;
   border-radius: 10px;
   color: white;
   font-size: 30px;
   font-weight: bold;
+  height: 175px;
 }
 
-.kaart_container .kaart_box .card .Jumbo h3 {
-  margin: 0px;
+.kaart_container .card .card-body {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 /*# sourceMappingURL=index.css.map */

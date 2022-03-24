@@ -44,7 +44,7 @@ function uidExists($conn, $userId, $email){
 
 //Check of er al dezelfde gebruiker email bestaat aan de hand van preparestatement.
 function checkMail($conn, $email){
-        // session_start();
+        session_start();
     $sql = "SELECT * FROM gebruiker WHERE gebruikermail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -136,7 +136,6 @@ function loginUser($conn, $email, $wachtwoord){
         header("location: ../login.php?error=wrong_pass");
         exit();
     }elseif($checkWachtwoord === true){
-        // session_start();
         $_SESSION["gebruikeruserlevel"] = $Mailbestaat['gebruikeruserlevel'];
         header("location: ../index.php");
         exit();
@@ -146,7 +145,7 @@ function loginUser($conn, $email, $wachtwoord){
 
 //We maken een user aan, aan de hand van prepare statements.
 function createUser($conn, $email, $wachtwoord, $userlevel){
-    session_start();
+
     $sql = "INSERT INTO gebruiker (gebruikermail, gebruikerpass, gebruikeruserlevel) VALUES (?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -200,19 +199,10 @@ function bedrijvenophalen($conn){
     exit();
     }
     mysqli_stmt_execute($stmt);
+
     $resultData = mysqli_stmt_get_result($stmt);
-    if ($resultData->num_rows > 0) {
-        $string = "";
-    if($row = mysqli_fetch_assoc($resultData)){
-            while($row = $resultData->fetch_assoc()) {
-    $string =+ "Bedrijfnaam: " . $row["bedrijfnaam"]. " - Bedrijfbeschrijving: " . $row["bedrijfbeschrijving"]. " korting: " . $row["bedrijfkorting"]. "<br>";
-  }
-  return $string;
-        }
-    }else{
-        $result = "het werkt niet";
-        return $result;
-    }
+    return $resultData;
+       
 
     mysqli_stmt_close($stmt);
 }
