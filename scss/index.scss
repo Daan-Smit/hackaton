@@ -25,14 +25,9 @@
 }
 .kaart_container{
     @media (min-width: 320px) {
-        max-width: 90%;
         margin: auto;
         margin-top: 25px;
         margin-bottom: 25px;
-        border-style: solid;
-        border-width: 2px;
-        border-color: black;
-        border-radius: 10px;
     }
     @media (min-width: 481px) {
         max-width: 80%;
@@ -55,28 +50,19 @@
         border-radius: 10px;
     }
     
-    // .kaart_box{
-    //     margin: auto;
-    //     .kaart{
-    //         text-align: center;
-    //         margin: 20px;
-    //         height: 500px!important;
-    //         .kaart-body{
-    //             background-color: #EEB717;
-    //             border-radius: 10px;
-    //             color: white;
-    //             font-size: 30px;
-    //             font-weight: bold;
-    //             display: table-cell!important;
-    //             vertical-align: middle!important;
-    //             text-align: center!important;
-    //             .rij{
-    //                 display: inline-block!important;
-    //                 width: 200px; 
-    //                 height: 200px;
-    //             }
-    //         }     
-    //     } 
-    // }
+    .card{
+        text-align: center;
+        margin: 20px;
+        background-color: #EEB717;
+        border-radius: 10px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        height: 175px;
+        .card-body{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }    
+    }
 }
 //einde styling van pasjes.php

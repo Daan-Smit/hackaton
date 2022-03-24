@@ -14,9 +14,9 @@ require "header.php";
     <div class="kaart_box">
         <?php 
         while($x >= 1){
-            echo "<div class='kaart card '>
-                    <div class='card-body kaart-body Jumbo'>
-                        <div class='row rij'>
+            echo "<div class='card '>
+                    <div class='card-body'>
+                        <div class='row'>
                             <div class='col-6'>
                                 <span>$bedrijfsnaam<span>
                             </div>
