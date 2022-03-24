@@ -1,3 +1,8 @@
+//minimale hoogte pagina
+.pagina{
+    min-height: 400px;
+}
+
 //styling van header
 .header_img {
     display: flex;
@@ -10,10 +15,11 @@
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
       ),
-      url("../img/Leergeld_Nederland_Zwemles_1.png");
+      url("../img/Leergeld_Nederland_Schoolplein.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
+    background-position-x: right;
     height: 350px;
     border-radius: 0px 0px 20px 20px;
     h1 {
@@ -30,7 +36,7 @@
   }
 //einde styling van header
 
-//styling van homepage
+//styling van homepage en forms
 .main {
     padding-top: 25px;
     padding-bottom: 25px;  
@@ -39,8 +45,29 @@
         margin-bottom: 10px;
         margin-top: 20px;
     }
+    .btn{
+        font-size: 15px;
+    }
+    form{
+        margin-top: 20px;
+        input{
+            margin-bottom: 20px;
+        }
+    }
+    .opbrengst{
+        background-color: lightgrey;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        .inhoud{
+            text-align: start;
+            padding-left: 30px;
+            h3 {
+                margin: 0px;
+            }
+        }
+    }
 }
-//einde styling van homepage
+//einde styling van homepage en forms
 
 //styling van pasjes.php
 .kaart_container {

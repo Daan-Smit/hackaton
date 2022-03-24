@@ -15,6 +15,25 @@ require "header.php";
         <button type="submit" class="btn">Doneer nu zelf</button>
     </form>
     <p>de top 3 opbrengsten:</p>
+    <div class="container opbrengst">
+        <div class="row">
+            <div class="col inhoud">
+                <h3>Jumbo: €</h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col inhoud">
+                <h3>Jumbo: €</h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col inhoud">
+                <h3>Jumbo: €</h3>
+            </div>
+        </div>
+    </div>
 </div>
 <?php
 require "footer.php";

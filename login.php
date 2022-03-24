@@ -2,13 +2,14 @@
 require "header.php";
 ?>
 
-    <section>
+    <div class="container main">
         <h2>Inloggen</h2>
         <form action="includes/login.inc.php" method="post">
-            <input type="text" name="gebruiker_mail" placeholder="Email addres">
-            <input type="password" name="gebruiker_wachtwoord" placeholder="Wachtwoord...">
+            <input type="text" name="gebruiker_mail" placeholder="Email addres"><br>
+            <input type="password" name="gebruiker_wachtwoord" placeholder="Wachtwoord..."><br>
             <button type="submit" name="inlog-submit">Inloggen</button>
         </form>
+    </div>
         <?php
 
         if(isset($_GET['error'])){
@@ -26,7 +27,6 @@ require "header.php";
             
         }
         ?>
-    </section>
 
 <?php
 require "footer.php";

@@ -3,7 +3,7 @@ require "header.php";
 ?>
 
     <section>
-    <div>
+    <div class="container main">
         <h1>Registreer hier een nieuw bedrijf:</h1>
         <form action="includes/registrerenbedrijven.inc.php" method="post" enctype="multipart/form-data">
             <input type="text" name="bedrijfnaam" placeholder="Bedrijfsnaam"><br>

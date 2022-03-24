@@ -78,4 +78,4 @@ $_SESSION['gebruikeruserlevel'] = 5;
             </div>
         </div>
     </nav>
-    <div>
+    <div class="pagina">
