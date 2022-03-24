@@ -107,8 +107,13 @@
 }
 
 .main .opbrengst .inhoud {
-  text-align: start;
+  text-align: center;
   padding-left: 30px;
+}
+
+.main .opbrengst .inhoud .logo-home {
+  max-height: 7vw;
+  max-width: 30vw;
 }
 
 .main .opbrengst .inhoud h3 {

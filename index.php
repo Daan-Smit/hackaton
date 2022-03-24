@@ -14,26 +14,29 @@ require "header.php";
     <form action="doneren.php">
         <button type="submit" class="btn">Doneer nu zelf</button>
     </form>
-    <p>de top 3 opbrengsten:</p>
+    <p>Onze sponsors</p>
+    
     <div class="container opbrengst">
+        <!--repeat-->
         <div class="row">
             <div class="col inhoud">
-                <h3>Jumbo: €</h3>
+                <img class="logo-home" src="img/jumbo_logo.png">
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col inhoud">
-                <h3>Jumbo: €</h3>
+                <img class="logo-home" src="img/jumbo_logo.png">
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col inhoud">
-                <h3>Jumbo: €</h3>
+                <img class="logo-home" src="img/jumbo_logo.png">
             </div>
         </div>
     </div>
+    <!--einde repeat-->
 </div>
 <?php
 require "footer.php";
