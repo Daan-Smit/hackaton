@@ -1,67 +1,62 @@
 //styling van pasjes.php
-.header_img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 90px;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ),
-    url("../img/Leergeld_Nederland_Zwemles_1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  height: 350px;
-  border-radius: 0px 0px 20px 20px;
-  h1 {
+.header_img{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-    font-weight: 100;
-    font-size: 40;
-    padding-bottom: 30px;
-    color: white;
-  }
-}
-.kaart_container {
-  @media (min-width: 320px) {
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  @media (min-width: 481px) {
-    max-width: 80%;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-  }
-  @media (min-width: 769px) {
-    max-width: 60%;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-  }
-
-  .card {
-    text-align: center;
-    margin: 20px;
-    background-color: #eeb717;
-    border-radius: 10px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    height: 175px;
-    .card-body {
-      padding-top: 60px;
-      padding-bottom: 60px;
+    padding: 90px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/Leergeld_Nederland_Zwemles_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    height: 350px;
+    border-radius: 0px 0px 20px 20px;
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-weight: 100;
+        font-size: 40;
+        padding-bottom: 30px;
+        color: white;
     }
-  }
+}
+.kaart_container{
+    @media (min-width: 320px) {
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    @media (min-width: 481px) {
+        max-width: 80%;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+    @media (min-width: 769px) {
+        max-width: 60%;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+    
+    .card{
+        text-align: center;
+        margin: 20px;
+        background-color: #EEB717;
+        border-radius: 10px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        height: 175px;
+        .card-body{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }    
+    }
 }
 //einde styling van pasjes.php
