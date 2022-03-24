@@ -23,7 +23,7 @@ require_once "includes/functions.inc.php";
                     </div>
                     <div class="row">
                         <div class="col inhoud">
-                            <a class="knop" href="qrcode.php">Genereer QRcode</a>
+                            <a class="knop" href="qrcode.php?qrcode=<?php echo $row['bedrijflink'] ;?>">Genereer QRcode</a>
                         </div>
                     </div>
                     <div class="row">
