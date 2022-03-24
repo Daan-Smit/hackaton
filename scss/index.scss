@@ -65,3 +65,22 @@
   }
 }
 //einde styling van pasjes.php
+
+//styling van info_bedrijf.php
+.achtergrond{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: orange;
+    .vak{
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        align-items: center;
+        .logo{
+            .column{
+                align-self: center;
+            }
+        }
+    }
+}
+//einde styling van info_bedrijf.php
