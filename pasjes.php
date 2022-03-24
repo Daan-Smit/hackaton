@@ -8,9 +8,9 @@ require "header.php";
             <div style="text-align: center;">
                 <h3>Filteren op:</h3>
                 <form class="filter-knoppen" action="pasjes.php" method="GET">
-                    <button name="filter" value="favoriet">Favoriet</button>
-                    <button name="filter" value="nieuw">Nieuw</button>
-                    <button name="filter" value="korting">Korting</button>
+                    <button class="btn btn-dark" name="filter" value="favoriet">Favoriet</button>
+                    <button class="btn btn-dark" name="filter" value="nieuw">Nieuw</button>
+                    <button class="btn btn-dark" name="filter" value="korting">Korting</button>
                 </form>
             </div>
         <?php 
