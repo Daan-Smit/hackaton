@@ -23,7 +23,7 @@ require "header.php";
             }elseif($_GET['error'] == "wrong_pass"){
                 echo "Dit is niet het juiste wachtwoord.";
             }elseif($_GET['error'] == "incorrect_email"){
-                echo "Dit is geen bestaand klantnummer of email adres.";
+                echo "Dit is geen bestaand email adres in onze database.";
             }
         }
         ?>

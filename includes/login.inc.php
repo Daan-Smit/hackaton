@@ -14,7 +14,7 @@ if(isset($_POST["inlog-submit"])){
         exit();
     }
 
-    loginUser($conn, $id_mail, $wachtwoord);
+    loginUser($conn, $email, $wachtwoord);
 }else{
     header("location: ../login.php");
     exit();
