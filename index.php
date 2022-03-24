@@ -1,7 +1,9 @@
 <?php 
 require "header.php";
 ?>
-
+<div class="header_img">
+    <h1>Stichting Leergeld</h1>
+</div>
     <section>
     <div>
         <h1>Dit is de Home Pagina</h1>
