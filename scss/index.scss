@@ -17,18 +17,30 @@
     height: 350px;
     border-radius: 0px 0px 20px 20px;
     h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       text-align: center;
       font-weight: 100;
       font-size: 40;
       padding-bottom: 30px;
       color: white;
     }
+    h2 {
+        text-align: center;
+        color: white;
+    }
   }
 //einde styling van header
+
+//styling van homepage
+.main {
+    padding-top: 25px;
+    padding-bottom: 25px;  
+    text-align: center;
+    p{
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+//einde styling van homepage
 
 //styling van pasjes.php
 .kaart_container {
@@ -54,7 +66,6 @@
   .card {
     text-align: center;
     margin: 20px;
-    background-color: #eeb717;
     border-radius: 10px;
     color: white;
     font-size: 30px;
@@ -72,7 +83,6 @@
 .achtergrond{
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: orange;
     .vak{
         background-color: white;
         border-radius: 10px;
