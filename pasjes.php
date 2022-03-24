@@ -2,7 +2,7 @@
 require "header.php";
 ?>
 <?php 
-if($_SESSION['gebruikeruserlevel'] != 2){
+if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5){
     header("location: index.php");
     exit();
 }

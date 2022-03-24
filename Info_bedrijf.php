@@ -4,7 +4,7 @@ require_once "includes/dbh.inc.php";
 require_once "includes/functions.inc.php";
 ?>
 <?php 
-if($_SESSION['gebruikeruserlevel'] != 2){
+if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5){
     header("location: index.php");
     exit();
 }
