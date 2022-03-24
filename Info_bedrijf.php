@@ -10,14 +10,15 @@ require "header.php";
             </div>
         </div>
         <div class="row">
-            <div class="col-5"></div>
-            <div class="col-2 inhoud positie_knop">
+            <div class="col inhoud">
                 <a class="knop" href="qrcode.php">Genereer QRcode</a>
             </div>
-            <div class="col-5 inhoud positie_favoriet">
+        </div>
+        <!-- <div class="row">
+            <div class="col inhoud">
                 <img src="img/Heart.png" style="width: 30px; height: 30px;">
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col inhoud">
                 <h1>5% korting</h1>
