@@ -13,8 +13,9 @@ require "header.php";
         if ($data->num_rows > 0) {
           while($row = $data->fetch_assoc()) {
         ?>
-            <div class='card' >
-                    <div class='card-body' style="background-color: <?php echo $row["bedrijfkleurcode"]; ?>!important;">
+          <a href="infobedrijf.php?bedrijf=<?php echo $row["bedrijfslug"]; ?>">
+            <div class='card' style="background-color: <?php echo $row["bedrijfkleurcode"]; ?>!important;" >
+                    <div class='card-body' >
                         <div class='row'>
                             <div class='col-6'>
                                 <span><?php echo $row["bedrijfnaam"]; ?><span>
@@ -24,7 +25,8 @@ require "header.php";
                             </div>
                         </div>
                     </div>
-            </div>;
+            </div>
+          </a> 
         <?php
           }
         }
