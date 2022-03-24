@@ -199,11 +199,8 @@ function bedrijvenophalen($conn){
     exit();
     }
     mysqli_stmt_execute($stmt);
-
     $resultData = mysqli_stmt_get_result($stmt);
     return $resultData;
-       
-
     mysqli_stmt_close($stmt);
 }
 
@@ -215,10 +212,7 @@ function bedrijvenophalenkorting($conn){
     exit();
     }
     mysqli_stmt_execute($stmt);
-
     $resultData = mysqli_stmt_get_result($stmt);
     return $resultData;
-       
-
     mysqli_stmt_close($stmt);
 }
