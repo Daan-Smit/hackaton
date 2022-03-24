@@ -27,8 +27,8 @@
 <body>
 <?php 
 session_start();
-if(isset($_SESSION['gebruikeruserlevel'])){
-$_SESSION['gebruikeruserlevel'] = 0;
+if(!isset($_SESSION['gebruikeruserlevel'])){
+$_SESSION['gebruikeruserlevel'] = 5;
 }
 
 ?>
@@ -55,15 +55,20 @@ $_SESSION['gebruikeruserlevel'] = 0;
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 
                     <?php 
-                    if ($_SESSION['gebruikeruserlevel'] === 0){
+
+                    if ($_SESSION['gebruikeruserlevel'] === 1 || $_SESSION['gebruikeruserlevel'] === 5){
                         echo '<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="login.php">Inloggen</a></li>';
-                    }elseif($_SESSION['gebruikeruserlevel'] >= 1){
+                    }
+                    if($_SESSION['gebruikeruserlevel'] >= 2){
                         echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="pasjes.php">Mijn pasjes</a></li>';
-                    }elseif($_SESSION['gebruikeruserlevel'] === 5){
-                        echo '<li class="nav-item"><a class="nav-link" href="signup.php">Registreren</a></li>';
                     }
+                    if($_SESSION['gebruikeruserlevel'] === 5){
+                        echo '<li class="nav-item"><a class="nav-link" href="registrerenbedrijven.php">Registreren</a></li>';
+                    }
+
+
                     ?>
                 </ul>
                 

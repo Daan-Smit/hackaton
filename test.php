@@ -24,8 +24,7 @@
 <?php 
 require_once "includes/dbh.inc.php";
 require_once "includes/functions.inc.php";
-$resultaten = bedrijvenophalen($conn);
-echo $resultaten['bedrijfnaam'];
+echo bedrijvenophalen($conn);
 ?>
     
 <?php
