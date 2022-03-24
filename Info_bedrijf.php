@@ -16,9 +16,9 @@ require_once "includes/functions.inc.php";
         ?>
             <div class="container-fluid achtergrond" style="background-color:<?php echo $row['bedrijfkleurcode'] ;?> ;">
                 <div class="container vak">
-                    <div class="row logo">
+                    <div class="row">
                         <div class="col inhoud">
-                            <img src="img/<?php echo $row['bedrijflogo'] ;?>">
+                            <img class="logo" src="img/<?php echo $row['bedrijflogo'] ;?>">
                         </div>
                     </div>
                     <div class="row">
