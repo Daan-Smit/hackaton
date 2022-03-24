@@ -67,6 +67,7 @@ if(!isset($_SESSION['gebruikeruserlevel'])){
                     }
                     //admin
                     if($_SESSION['gebruikeruserlevel'] === 5){
+                        echo '<li class="nav-item"><a class="nav-link" href="pasjes.php">Mijn pasjes</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="signup.php">Gebruikers registreren</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="registrerenbedrijven.php">Bedrijven registreren</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="profile.php">Mijn profiel</a></li>';
