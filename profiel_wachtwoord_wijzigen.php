@@ -9,10 +9,10 @@ if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5)
 ?>
 <div class="container main">
     <h2>Verander uw wachtwoord</h2>
-    <form action="includes/profiel_wachtwoord_wijzigen.inc.php" method="post">
+    <form action="profile.php" method="post">
         <input type="text" name="profiel_nieuw_wachtwoord" placeholder="Nieuw wachtwoord"><br>
         <input type="text" name="profiel_herhaal_wachtwoord" placeholder="Herhaal wachtwoord"><br>
-        <button type="submit" name="profiel_ww_wijzigen-submit">wijzig wachtwoord</button>
+        <button class="btn btn-black" type="submit" name="profiel_ww_wijzigen-submit">wijzig wachtwoord</button>
     </form>
 </div>
 <?php
