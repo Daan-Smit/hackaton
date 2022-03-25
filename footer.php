@@ -55,20 +55,17 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
+          <h5 class="text-uppercase">Contact</h5>
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">Link 1</a>
+              <a href="#!" class="text-white">Telefoon: 013-545 1656</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Link 2</a>
+              <a href="#!" class="text-white">Email: info@leergeld.nl</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
+              <a href="#!" class="text-white">website: www.leergeld.nl</a>
             </li>
           </ul>
         </div>
@@ -76,20 +73,17 @@
 
         <!--Grid column-->
         <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
+          <h5 class="text-uppercase">Info</h5>
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">Link 1</a>
+              <a href="#!" class="text-white">KvK: 18076411</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Link 2</a>
+              <a href="#!" class="text-white">Bankrekening: NL27 RABO 0166 2662 99</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
+              <a href="#!" class="text-white">Fiscaal nummer: 8144.66.424</a>
             </li>
           </ul>
         </div>
