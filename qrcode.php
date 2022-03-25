@@ -9,6 +9,10 @@ if($_SESSION['gebruikeruserlevel'] != 2 && $_SESSION['gebruikeruserlevel'] != 5)
 }
 
 //bedrijf ophalen
+if(!isset($_GET['bedrijf'])){
+    header("location: pasjes.php");
+    exit();
+}
 $bedrijf = $_GET['bedrijf'];
 ?>
 
