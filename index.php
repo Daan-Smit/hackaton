@@ -13,9 +13,16 @@ require_once "includes/functions.inc.php";
         activiteiten die voor hun leeftijdsgenootjes heel normaal zijn. 
         Zij staan vaak letterlijk aan de zijlijn. 
         Leergeld wil deze kinderen mee laten doen!</p>
-    <form action="doneren.php">
+    <?php
+    if($_SESSION['gebruikeruserlevel'] != 2){
+        ?>
+        <form action="doneren.php">
         <button type="submit" class="btn">Doneer nu zelf</button>
-    </form>
+        </form>
+        <?php
+    }
+    ?>
+
 
     <h2 style="margin-top: 50px;">Bedankt sponsoren!</h2>
     
